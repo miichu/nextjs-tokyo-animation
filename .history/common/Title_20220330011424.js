@@ -10,18 +10,14 @@ export const animationStyling = css`
       margin-top: 0%;
     }
   }
-`;
 
-export const slideBounceAnimation = css`
   @keyframes slideBounce {
     0% {
-      margin-top: 2em;
+      margin-top: 100%;
     }
     25% {
-      margin-top: -1em;
     }
     50% {
-      margin-top: 0.5em;
     }
     100% {
       margin-top: 0;
@@ -43,7 +39,7 @@ const StyledTitle = styled.h1`
     z-index: 1000;
 
     animation: slideBounce 2s ;
-    ${slideBounceAnimation}
+    ${animationStyling}
   `};
 `;
 

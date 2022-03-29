@@ -15,13 +15,11 @@ export const animationStyling = css`
 export const slideBounceAnimation = css`
   @keyframes slideBounce {
     0% {
-      margin-top: 2em;
+      margin-top: 100%;
     }
     25% {
-      margin-top: -1em;
     }
     50% {
-      margin-top: 0.5em;
     }
     100% {
       margin-top: 0;

@@ -42,7 +42,7 @@ const StyledTitle = styled.h1`
     color: white;
     z-index: 1000;
 
-    animation: slideBounce 2s ;
+    animation: slideBounce 1.5s ;
     ${slideBounceAnimation}
   `};
 `;
