@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import animationStyling from "./Title";
 
 const StyledDescription = styled.p`
