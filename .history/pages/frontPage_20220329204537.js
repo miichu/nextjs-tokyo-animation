@@ -1,0 +1,48 @@
+import styled from "styled-components";
+import Link from "next/link";
+import Image from "next/image";
+import profile from "next/profile";
+
+const Page = styled.div``;
+
+const Heading1 = styled.h1`
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  text-align: center;
+
+  a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: underline;
+  }
+`;
+
+const Description = styled.p`
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.5rem;
+`;
+
+export default function FrontPage({ children }) {
+  return (
+    <Page>
+      <Heading1>
+        Read{" "}
+        <Link href="/posts/first-post">
+          <a>this page!</a>
+        </Link>{" "}
+      </Heading1>
+      <Image 
+
+      <Description>
+        Get started by editing <code>pages/index.js</code>
+      </Description>
+    </Page>
+  );
+}
