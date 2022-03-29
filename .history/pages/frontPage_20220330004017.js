@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { useState } from "react";
 import Image from "next/image";
 import unfoldImg from "../public/images/unfold.jpg";
@@ -7,7 +7,23 @@ import ExpandButton from "../common/ExpandButton";
 import Description from "../common/Description";
 import Title from "../common/Title";
 
-const Container = styled.div`
+const Page = styled.div`
+  @keyframes slidein {
+    from {
+      margin-top: 15%;
+    }
+
+    80% {
+      margin-top: 5%;
+    }
+
+    to {
+      margin-top: 0%;
+    }
+  }
+`;
+
+const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, fit-content);
@@ -39,27 +55,29 @@ export default function FrontPage() {
     " that are good for people and business.";
   const descriptionText = !expandView ? randomText : "By My Thao Nguyen";
   return (
-    <Container>
-      <CloseButton
-        expandView={expandView}
-        onClick={() => setExpandView(false)}
-      />
-
-      <ImageWrapper expandView={expandView}>
-        <Image src={unfoldImg} alt="Unfold kontor" height="1000" />
-      </ImageWrapper>
-      <Title expandView={expandView} className="title">
-        Found in Unfold
-      </Title>
-
-      <Description expandView={expandView}>{descriptionText}</Description>
-
-      {!expandView && (
-        <ExpandButton
+    <Page>
+      <Container>
+        <CloseButton
           expandView={expandView}
-          onClick={() => setExpandView(true)}
+          onClick={() => setExpandView(false)}
         />
-      )}
-    </Container>
+
+        <ImageWrapper expandView={expandView}>
+          <Image src={unfoldImg} alt="Unfold kontor" height="1000" />
+        </ImageWrapper>
+        <Title expandView={expandView} className="title">
+          Found in Unfold
+        </Title>
+
+        <Description expandView={expandView}>{descriptionText}</Description>
+
+        {!expandView && (
+          <ExpandButton
+            expandView={expandView}
+            onClick={() => setExpandView(true)}
+          />
+        )}
+      </Container>
+    </Page>
   );
 }

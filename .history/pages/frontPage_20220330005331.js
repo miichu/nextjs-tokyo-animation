@@ -7,7 +7,34 @@ import ExpandButton from "../common/ExpandButton";
 import Description from "../common/Description";
 import Title from "../common/Title";
 
-const Container = styled.div`
+const slideInAnimation = keyframes`
+ 
+    transition-timing-function: ease-out;
+    transition: 0.25s;
+    transform: translateY(-20%);
+    
+     from {
+      margin-top: 15%;
+    }
+
+    to {
+      margin-top: 0%;
+    }
+  `;
+const bounceAnimation = keyframes`
+
+   from {
+      margin-top: 15%;
+    }
+
+    to {
+      margin-top: 0%;
+    }
+  
+    
+`;
+
+const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, fit-content);

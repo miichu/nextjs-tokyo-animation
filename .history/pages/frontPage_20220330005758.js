@@ -7,7 +7,7 @@ import ExpandButton from "../common/ExpandButton";
 import Description from "../common/Description";
 import Title from "../common/Title";
 
-const Container = styled.div`
+const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, fit-content);
